@@ -1,0 +1,28 @@
+@mixin to($tweens...){
+  @if $noErrors {
+    @if $isAuto {
+      @each $tween in $tweens {             
+        @if $tween > $breakPoints or $tween < 0{
+          @warn "You entered a break value of #{$tween}, the value entered is larger than the current number of breaks set or less than the value.";
+        } 
+        @else {        
+          @include minmax(($breakWidth * (1 - 1)), ($breakWidth * $tween) + 1){
+            @content;
+          }
+        }        
+      }
+    } 
+    @else { 
+      @each $tween in $tweens {
+        @if $tween > totalBreaks() or $tween < 0{
+          @warn "You entered a break value of #{$tween}, the value entered is larger than the current number of breaks set or less than the value.";
+        }
+        @else {
+          @include minmax(bv(1), bv($tween + 1)){
+            @content;
+          }             
+        }  
+      }  
+    }
+  }
+}

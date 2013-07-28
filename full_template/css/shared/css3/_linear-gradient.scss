@@ -1,0 +1,27 @@
+@mixin linear-gradient($gradientLine, $colorStops...) {   
+  background-color: nth($colorStops,1);
+  background-image: -webkit-gradient(linear,$gradientLine, $colorStops);
+  background-image: -webkit-linear-gradient($gradientLine, $colorStops);
+  background-image:    -moz-linear-gradient($gradientLine, $colorStops);
+  background-image:      -o-linear-gradient($gradientLine, $colorStops);
+  background:             -ms-linear-gradient($gradientLine, $colorStops);  
+  @if length($colorStops) == 2 {
+    $colour1:nth($colorStops,1);
+    $colour2:nth($colorStops,2);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$colour1}', endColorstr='#{$colour2}',GradientType=0 );
+  }  
+  @if length($gradientLine) == 2 {
+  background-image:         linear-gradient(to #{inverse-side(nth($gradientLine, 1))} #{inverse-side(nth($gradientLine, 2))}, $colorStops);
+  } @else {
+  background-image:         linear-gradient(to #{inverse-side($gradientLine)}, $colorStops);
+  }
+}
+
+@mixin linear-gradient-less-support($pos, $colorStops) {
+  background-color: nth($colorStops,1);
+  background-image: -webkit-gradient(linear,$pos, $colorStops);
+  background-image: -webkit-linear-gradient($pos, $colorStops);
+  background-image:    -moz-linear-gradient($pos, $colorStops);
+  background-image:      -o-linear-gradient($pos, $colorStops);
+  background:             -ms-linear-gradient($pos, $colorStops);  
+}

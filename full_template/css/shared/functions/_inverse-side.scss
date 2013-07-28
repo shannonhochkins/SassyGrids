@@ -1,0 +1,8 @@
+
+//Inverse side usage: @include inverse-side(left) >. Returns right
+@function inverse-side($side) {
+  @if      $side == top    { @return bottom; }
+  @else if $side == bottom { @return top; }
+  @else if $side == left   { @return right; }
+  @return left;
+}

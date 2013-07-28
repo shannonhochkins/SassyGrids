@@ -1,0 +1,21 @@
+@mixin centerCol($howManyGrids: 0, $fluid: false, $addMargin: false) {
+  @if $noErrors {
+    $colsRemaining: ($numberOfColumns - $howManyGrids);
+    @if ($howManyGrids > $numberOfColumns){
+      @warn "Please enter a value greater than the number of columns set up in the basic setup section.";
+    } @else {
+      $newMargin: (gw($colsRemaining, $fluid, false, false) / 2) + ($gutterWidth );
+      @if $fluid {
+        margin-left:$newMargin + unquote("%");
+        margin-right:$newMargin + unquote("%");
+      } @else {
+        margin-left:$newMargin + px;
+        margin-right:$newMargin + px;  
+      }
+      
+    }
+    //Usage:
+    //@include centerCol(15, false);
+    //@include cols(15, false);
+  }
+}

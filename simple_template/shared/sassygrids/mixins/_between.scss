@@ -1,0 +1,30 @@
+@mixin between($tweens...){
+  @if $noErrors {
+    @if $isAuto {
+      @each $tween in $tweens {             
+        @if nth($tween,1) > $breakPoints or nth($tween,2) > $breakPoints {
+          @warn "You entered a betwee value of #{$tween}, one of the values entered is larger than the current number of breaks set or less than the value.";
+        } 
+        @else {
+          @include minmax(($breakWidth * (nth($tween,1) - 1) + 1), ($breakWidth * (nth($tween,2))), 0){
+            @content;
+          } 
+        }        
+      }
+    } 
+    @else { 
+      @each $tween in $tweens {
+        $i: nth($tween,1);
+        $t: nth($tween,2) + 1;
+        @if $i > totalBreaks() or $t > totalBreaks(){
+          @warn "You entered a betwee value of #{$tween}, one of the values entered is larger than the current number of breaks set or less than the value.";
+        }
+        @else {                
+          @include minmax(bv($i), bv($t) - 1, 0){
+            @content;
+          }  
+        }  
+      }  
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// =========== Forms
+
+
+@mixin form-item {
+  padding: $form-padding;
+  width: 100%;
+  display: block;
+  border: $form-border-size $form-border-style $form-border-color;
+  @include border-radius($radius);
+  &:focus { 
+    border: $form-border-size $form-border-style lighten($form-border-color,10);
+    outline: none;
+  }
+}
+
+@mixin submit-button {
+  padding: $form-padding 20px;
+  @include border-radius($radius);
+  background: #eee;
+  border: $form-border-size $form-border-style $form-border-color;
+}
+
+#{$all-text-inputs},
+textarea {
+  @include form-item;
+  margin: 0 10px 20px 0;
+  font-family: 'PT Sans', sans-serif;
+  color: #cccccc;
+  font-size: 13px;
+  border-bottom: 1px #555555 Solid;
+  border-right: 1px #444444 Solid;
+  border-top: 1px #000000 Solid;
+  border-left: 1px #000000 Solid;
+  background-color: #444444;
+  overflow: hidden;
+  @include box-shadow(inset 0px 0px 85px rgba(0,0,0,.2));
+}
+
+#{$all-button-types} {
+  @include submit-button;
+}

@@ -1,0 +1,9 @@
+@mixin webfont($name, $base_filename, $weights, $style: 'normal') {
+  $style : '';
+  @if $style != 'normal' {
+    $style : '-#{$style}';
+  }
+  @each $weight in $weights {
+    @include font-face($name,font-files('#{$base_filename}_#{$weight}#{$style}.woff', woff, '#{$base_filename}_#{$weight}#{$style}.ttf', ttf), '#{$base_filename}_#{$weight}#{$style}.eot', $weight);
+  }
+}

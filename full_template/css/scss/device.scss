@@ -1,0 +1,13 @@
+@import '../shared/framework';
+
+body.device {
+  //Some available media queerie mixins
+  @include respond-to(xsmall){}
+  @include at(2){}
+  @include from(1){}
+  @include between(1 2){}
+  @include minmax(100,200){}
+  @include autoResponsive(){}
+  @include retina(){}
+  @include image2X(){}
+}

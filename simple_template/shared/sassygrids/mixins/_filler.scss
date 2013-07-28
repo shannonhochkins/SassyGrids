@@ -1,0 +1,15 @@
+@mixin filler($marginLeft: 0, $marginRight: 0, $fluid: false, $addMargin: true){
+  @if $noErrors {
+    //Adds a number of column spaces before and/or after the column.
+    @if $n > $numberOfColumns {
+      @warn $columnExceededWarning;
+    } @else {
+      @if ($marginLeft != 0) {
+        margin-left: gw($marginLeft, $fluid, $addMargin); 
+      }
+      @if ($marginRight != 0) {
+        margin-right: gw($marginRight, $fluid, $addMargin);  
+      }
+    }  
+  }
+}

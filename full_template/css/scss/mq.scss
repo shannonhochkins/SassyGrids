@@ -1,0 +1,12 @@
+@import '../shared/framework';
+   
+
+body {
+  .gridContainer {  
+    div[class^="grid"] {@include transition(all 0.3s ease-in-out);}
+    &.fluid {
+      @include minmax(null, $fullWidth){width:96%; margin:0 2%;}
+    } 
+  }
+  @include autoResponsive();
+}  

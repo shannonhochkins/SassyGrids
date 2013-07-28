@@ -1,0 +1,72 @@
+/* Body - fonts
+----------------------------------------------- */
+/* Global
+----------------------------------------------- */
+/* Font Specific Settings
+----------------------------------------------- */
+/* Form Settings 
+----------------------------------------------- */
+/* Tables
+----------------------------------------------- */
+/* Button settings
+----------------------------------------------- */
+/* Site colour variables
+----------------------------------------------- */
+/* Settings for SassyGrids 
+----------------------------------------------------------------------------------------------------*/
+.inner {
+  width: 960px; }
+
+.gradient {
+  background-color: rgba(52, 73, 94, 0.1);
+  background-image: linear-gradient(90deg, transparent 66.66667%, rgba(26, 188, 156, 0.2) 33.33333%);
+  background-size: 6.25%, 98.95833%;
+  background-position: 1.04167%, 1.04167%;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto; }
+
+.gridContainer div[class*="grid"], .gridContainer .oneCol, .gridContainer .twoCols, .gridContainer .threeCols, .gridContainer .fourCols, .gridContainer .fiveCols, .gridContainer .sixCols, .gridContainer .sevenCols, .gridContainer .eightCols, .gridContainer .nineCols, .gridContainer .tenCols {
+  height: 66px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-color: #3d566e;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75), inset 0 33px rgba(255, 255, 255, 0.21), inset 0 0 17px rgba(255, 255, 255, 0.41);
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75), inset 0 33px rgba(255, 255, 255, 0.21), inset 0 0 17px rgba(255, 255, 255, 0.41);
+  -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75), inset 0 33px rgba(255, 255, 255, 0.21), inset 0 0 17px rgba(255, 255, 255, 0.41);
+  -o-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75), inset 0 33px rgba(255, 255, 255, 0.21), inset 0 0 17px rgba(255, 255, 255, 0.41);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75), inset 0 33px rgba(255, 255, 255, 0.21), inset 0 0 17px rgba(255, 255, 255, 0.41);
+  background-color: rgba(52, 73, 94, 0.74);
+  background-image: -webkit-gradient(linear, top, rgba(52, 73, 94, 0.74), rgba(26, 188, 156, 0.74));
+  background-image: -webkit-linear-gradient(top, rgba(52, 73, 94, 0.74), rgba(26, 188, 156, 0.74));
+  background-image: -moz-linear-gradient(top, rgba(52, 73, 94, 0.74), rgba(26, 188, 156, 0.74));
+  background-image: -o-linear-gradient(top, rgba(52, 73, 94, 0.74), rgba(26, 188, 156, 0.74));
+  background: -ms-linear-gradient(top, rgba(52, 73, 94, 0.74), rgba(26, 188, 156, 0.74));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(52, 73, 94, 0.74)', endColorstr='rgba(26, 188, 156, 0.74)',GradientType=0 );
+  background-image: linear-gradient(to bottom, rgba(52, 73, 94, 0.74), rgba(26, 188, 156, 0.74));
+  text-align: center;
+  line-height: 66px; }
+  .gridContainer div[class*="grid"] div, .gridContainer .oneCol div, .gridContainer .twoCols div, .gridContainer .threeCols div, .gridContainer .fourCols div, .gridContainer .fiveCols div, .gridContainer .sixCols div, .gridContainer .sevenCols div, .gridContainer .eightCols div, .gridContainer .nineCols div, .gridContainer .tenCols div {
+    position: relative; }
+    .gridContainer div[class*="grid"] div:before, .gridContainer .oneCol div:before, .gridContainer .twoCols div:before, .gridContainer .threeCols div:before, .gridContainer .fourCols div:before, .gridContainer .fiveCols div:before, .gridContainer .sixCols div:before, .gridContainer .sevenCols div:before, .gridContainer .eightCols div:before, .gridContainer .nineCols div:before, .gridContainer .tenCols div:before {
+      position: absolute;
+      border-left: 1px inset black;
+      content: '';
+      height: 66px;
+      left: 0px; }
+    .gridContainer div[class*="grid"] div:after, .gridContainer .oneCol div:after, .gridContainer .twoCols div:after, .gridContainer .threeCols div:after, .gridContainer .fourCols div:after, .gridContainer .fiveCols div:after, .gridContainer .sixCols div:after, .gridContainer .sevenCols div:after, .gridContainer .eightCols div:after, .gridContainer .nineCols div:after, .gridContainer .tenCols div:after {
+      position: absolute;
+      border-right: 1px inset black;
+      content: '';
+      height: 66px;
+      right: 0px; }

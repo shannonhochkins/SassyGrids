@@ -1,0 +1,331 @@
+/* Body - fonts
+----------------------------------------------- */
+/* Global
+----------------------------------------------- */
+/* Font Specific Settings
+----------------------------------------------- */
+/* Form Settings 
+----------------------------------------------- */
+/* Tables
+----------------------------------------------- */
+/* Button settings
+----------------------------------------------- */
+/* Site colour variables
+----------------------------------------------- */
+/* Settings for SassyGrids 
+----------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 960px) {
+  body.device .gridItem.suffix0.fluid:not(.isolate), body.device .gridItem.prefix0.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix1.fluid:not(.isolate), body.device .gridItem.prefix1.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix2.fluid:not(.isolate), body.device .gridItem.prefix2.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix3.fluid:not(.isolate), body.device .gridItem.prefix3.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix4.fluid:not(.isolate), body.device .gridItem.prefix4.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix5.fluid:not(.isolate), body.device .gridItem.prefix5.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix6.fluid:not(.isolate), body.device .gridItem.prefix6.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix7.fluid:not(.isolate), body.device .gridItem.prefix7.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix8.fluid:not(.isolate), body.device .gridItem.prefix8.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix9.fluid:not(.isolate), body.device .gridItem.prefix9.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix10.fluid:not(.isolate), body.device .gridItem.prefix10.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix11.fluid:not(.isolate), body.device .gridItem.prefix11.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix12.fluid:not(.isolate), body.device .gridItem.prefix12.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix13.fluid:not(.isolate), body.device .gridItem.prefix13.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix14.fluid:not(.isolate), body.device .gridItem.prefix14.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix15.fluid:not(.isolate), body.device .gridItem.prefix15.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body.device .gridItem.suffix16.fluid:not(.isolate), body.device .gridItem.prefix16.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; } }
+@media screen and (min-width: 0px) and (max-width: 240px) {
+  body.device .grid1.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid2.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid3.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid4.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid5.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid6.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid7.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid8.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid9.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid10.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid11.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid12.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid13.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid14.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid15.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body.device .grid16.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; } }
+@media screen and (min-width: 240px) and (max-width: 480px) {
+  body.device .grid1.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid2.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid3.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid4.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid5.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid6.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid7.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid8.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid9.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid10.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid11.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid12.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid13.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid14.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid15.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body.device .grid16.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; } }
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  body.device .grid1.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid2.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid3.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid4.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid5.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid6.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid7.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid8.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid9.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid10.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid11.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid12.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid13.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid14.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid15.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body.device .grid16.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; } }
+@media screen and (min-width: 720px) and (max-width: 960px) {
+  body.device .grid1.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid2.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid3.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid4.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid5.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid6.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid7.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid8.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid9.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid10.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid11.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid12.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid13.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid14.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid15.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body.device .grid16.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; } }
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  body.device {
+    background: url(); } }

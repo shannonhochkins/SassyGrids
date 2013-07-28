@@ -1,0 +1,89 @@
+@import '../shared/framework';
+
+
+/* ADVANCED EDITING - EDIT AT OWN RISK
+----------------------------------------------------------- -----------------------------------------*/
+      
+/* Container      
+----------------------------------------------------------------------------------------------------*/
+.gridContainer {margin:0 auto; @include container();}   
+            
+                                                    
+/* Grid >> Global                         
+----------------------------------------------------------------------------------------------------*/
+$classes: ();   
+$pushPull: (); 
+$fluidClasses:();   
+$fluidList: oneCol twoCols threeCols fourCols fiveCols sixCols sevenCols eightCols nineCols tenCols;
+@for $i from 1 through $numberOfColumns {
+    $classes: join($classes, unquote(".grid#{$i} "), comma);
+    $pushPull: join($pushPull, unquote(".pull#{$i}, .push#{$i}, .pre#{$i}, .post#{$i} "), comma);
+}
+  
+#{$classes}   {display:inline;float: left;position: relative;
+  &.fluid     {@include gutter(true);}
+} 
+#{$pushPull}   {position:relative;  }      
+  
+     
+/* Total Columns >> #{$numberOfColumns}         
+    ----------------------------------------------------------------------------------------------------*/
+.gridContainer {
+  @for $grid from 1 through $numberOfColumns {
+    .grid#{$grid}         {@include cols($grid);
+      &.centerCol         {@include centerCol($grid, false);}
+      &.noMargin          {@include cols($grid, false, true, false, 0, false);}
+      &.alpha             {margin-left: 0;}
+      &.omega             {margin-right: 0;}   
+      &.fluid             {@include cols($grid, true);  
+        &.noMargin        {@include cols($grid, true, true, false, 0, false);} 
+        &.centerCol       {@include centerCol($grid, true);}  
+      }      
+    }
+    [class*="grid"].prefix#{$grid}        {@include prefix($grid, false, true);
+      &.fluid                             {@include prefix($grid, true, true);}         
+    } 
+    [class*="grid"].suffix#{$grid}        {@include suffix($grid, false, true); 
+      &.fluid                             {@include suffix($grid, true, true);}
+    }
+    [class*="grid"].push#{$grid}          {@include push($grid, false, true);
+      &.fluid                             {@include push($grid, true, true);} 
+    } 
+    [class*="grid"].pull#{$grid}          {@include pull($grid, false, true);    
+      &.fluid                             {@include pull($grid, true, true);}
+    } 
+    [class*="grid"].pre#{$grid}           {@include pre($grid, false, true);
+      &.fluid                             {@include pre($grid, true, true);}
+    }
+    [class*="grid"].post#{$grid}          {@include post($grid, false, true);
+      &.fluid                             {@include post($grid, true, true);}
+    }     
+    
+    &.fluid {
+      .grid#{$grid}       {@include cols($grid, true);
+        &.centerCol       {@include centerCol($grid, true);}
+        &.noMargin        {@include cols($grid, false, true, false, 0, false);} 
+      }      
+      [class*="grid"].prefix#{$grid}     {@include prefix($grid, true, true);}
+      [class*="grid"].suffix#{$grid}     {@include suffix($grid, true, true);}
+      [class*="grid"].push#{$grid}       {@include push($grid, true, true);} 
+      [class*="grid"].pull#{$grid}       {@include pull($grid, true, true);} 
+      [class*="grid"].pre#{$grid}        {@include pre($grid, true, true);}
+      [class*="grid"].post#{$grid}       {@include post($grid, true, true);}     
+    }     
+  }
+} 
+/* Fluid Classes
+----------------------------------------------------------------------------------------------------*/
+
+$gut: perc($gutterWidth);
+@for $i from 1 through length($fluidList){
+      $fluidClasses: join($fluidClasses, unquote(".#{nth($fluidList, $i)}"), comma);
+      .#{nth($fluidList, $i)} {width:(100% / $i) - $gut; margin-right: ($gut / 2); margin-left: ($gut / 2);
+            &.noMargin {width:100% / $i; margin-left:0; margin-right:0;}
+      }
+}
+ #{$fluidClasses} {float: left; display: inline-block; vertical-align: baseline; zoom: 1; *display: inline; *vertical-align: auto;}
+
+
+

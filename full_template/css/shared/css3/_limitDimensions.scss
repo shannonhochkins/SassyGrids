@@ -1,0 +1,9 @@
+@mixin limitDimensions($lim...)     {  
+  $limiter: nth($lim,1);
+  $dimension: nth($lim,2);
+  $unitless: strip-units($dimension);  
+  @if $limiter == max-width       {max-width:   $dimension;width:   expression( document.body.clientWidth > #{$unitless} ? "#{$dimension}" : "auto" ); /* sets max-width for IE */} 
+  @else if $limiter == max-height {max-height:  $dimension;height:  expression( this.scrollHeight > #{$unitless} ? "#{$dimension}" : "auto" ); /* sets max-height for IE */} 
+  @else if $limiter == min-width  {min-width:   $dimension;width:   expression( document.body.clientWidth < #{$unitless} ? "#{$dimension}" : "auto" ); /* set min-width for IE */}   
+  @else if $limiter == min-height {min-height:  $dimension;height:  expression( this.scrollHeight < #{$unitless} ? "#{$dimension}" : "auto" ); /* sets min-height for IE */}
+}

@@ -1,0 +1,24 @@
+@function gw($n, $fluid: false, $addMargin: false, $returnUnits: true) {
+  @if $noErrors {
+    $g:0;
+    @if $addMargin == true {$g:$gutterWidth;}
+    $calculatedValue: ($n * $columnWidth + ($n - 1) * $gutterWidth) + $g;
+    @if $fluid == false {
+      //Calculate the static grids with this function.
+      @if $returnUnits == true {
+        @return $calculatedValue + px;
+      }
+      @else {
+        @return $calculatedValue;
+      }
+    } @else {
+      //Calculate the fluid grids with this function.    
+      @if $returnUnits == true {
+        @return perc($calculatedValue, $fullWidth);
+      } 
+      @else {
+        @return $calculatedValue / $fullWidth * 100;
+      }  
+    }
+  }
+}

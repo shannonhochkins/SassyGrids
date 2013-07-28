@@ -1,0 +1,32 @@
+//************************************************************************//
+// Shorthand Border-radius mixins
+//************************************************************************//
+
+@mixin border-radius($radius...)          {
+  @include prefixer(border-radius, $radius, all); 
+  @include background-clip(padding-box);
+}
+
+@mixin border-top-radius($radii) {
+  @include prefixer(border-top-left-radius, $radii, all);
+  @include prefixer(border-top-right-radius, $radii, all);
+  @include background-clip(padding-box);
+}
+
+@mixin border-bottom-radius($radii) {
+  @include prefixer(border-bottom-left-radius, $radii, all);
+  @include prefixer(border-bottom-right-radius, $radii, all);
+  @include background-clip(padding-box);
+}
+
+@mixin border-left-radius($radii) {
+  @include prefixer(border-top-left-radius, $radii, all);
+  @include prefixer(border-bottom-left-radius, $radii, all);
+  @include background-clip(padding-box);
+}
+
+@mixin border-right-radius($radii) {
+  @include prefixer(border-top-right-radius, $radii, all);
+  @include prefixer(border-bottom-right-radius, $radii, all);
+  @include background-clip(padding-box);
+}

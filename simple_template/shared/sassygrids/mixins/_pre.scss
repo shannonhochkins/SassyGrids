@@ -1,0 +1,15 @@
+@mixin pre($n, $fluid: false, $addMargin: true){
+  @if $noErrors {
+    @if $n > $numberOfColumns {
+      @warn $columnExceededWarning;
+    } @else {
+    	$pre:gw($n, false, $addMargin, false);
+    	$preGutter:$pre + ($gutterWidth / 2);
+    	@if $fluid {
+			margin-left: perc($preGutter, $fullWidth);
+    	}@else {
+    		margin-left: $preGutter + px;	
+    	}      	
+    }  
+  }
+}

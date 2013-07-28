@@ -1,0 +1,81 @@
+ @import '../shared/framework';
+
+/* Float Classes */
+.floatRight       {float:right;vertical-align:top;}
+.floatLeft        {float:left;vertical-align:top;}
+.clearLeft        {clear:left;}
+.clearRight       {clear:right;}
+.clearBoth        {clear:both;}
+.clearfix         {@include clearfix();}
+/* Hides from IE-mac \*/
+* html .clearFix  { height: 1%; }
+/* End hide from IE-mac */
+.inlineBlock      {@include inline-block();}
+
+.disableScroll    {overflow-y: hidden;}
+
+/*Text Classes*/
+.textAlignLeft    {text-align:left;}
+.textAlignRight   {text-align:right;}
+.textAlignCenter  {text-align:center;}
+.textAlignJustify {text-align:justify;}
+.uppercase        {text-transform:uppercase;}
+.capitalize       {text-transform:capitalize;}
+.lowercase        {text-transform:lowercase;}
+.defaultText      {text-transform:none;}
+.bold             {font-weight:bold;}
+.light            {font-weight:lighter;}
+.normal           {font-weight:normal;} 
+.black            {color:black;}
+.white            {color:white;}
+
+
+.disableChildren > *  {@include opacity(0.5);}
+
+//Set margins for UI elements.
+$marginBase: $vertical-spacing;
+.noMargin           {margin:0;}
+.horizontalMargin   {margin-left:$marginBase + px; margin-right:$marginBase + px;}
+.verticalMargin     {margin-top:$marginBase + px; margin-bottom:$marginBase + px;}
+.bothMargins        {margin:$marginBase + px $marginBase + px;}
+.marginTop          {margin-top:($marginBase) + px;}
+.marginRight        {margin-right:($marginBase) + px;}
+.marginBottom       {margin-bottom:($marginBase) + px;}
+.marginLeft         {margin-left:($marginBase) + px;}
+.marginTopDouble    {margin-top:($marginBase * 2) + px;}
+.marginRightDouble  {margin-right:($marginBase * 2) + px;}
+.marginBottomDouble {margin-bottom:($marginBase * 2) + px;}
+.marginLeftDouble   {margin-left:($marginBase * 2) + px;}
+.noMarginTop        {margin-top:0px;}
+.noMarginRight      {margin-right:0px;}
+.noMarginBottom     {margin-bottom:0px;}
+.noMarginLeft       {margin-left:0px;}
+
+
+.noPadding          {padding:0;}
+
+.hideText			{@include hide-text();}
+.slanted			{@include slanted-highlight(red, span)}
+
+
+.fillWidth        {width:auto; height: auto; max-width:100%;}
+.fillHeight       {width:auto; height: auto; max-height:100%;}
+
+/* Chrome Frame prompt  */
+.chromeFrame {margin: 0.2em 0;background: #ccc;color: #000;padding: 0.2em 0;}
+/* Image replacement */
+.ir {background-color: transparent;border: 0;overflow: hidden;/* IE 6/7 fallback */*text-indent: -9999px;}
+.ir:before {content: "";display: block;width: 0;height: 100%;} 
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden, #simplemodal-data .hiddenModal {display: none;}
+/*Hide only visually, but have it available for screenreaders: h5bp.com/v*/
+.visuallyHidden {visibility:hidden !important; display:block !important;}
+/* Hide visually and from screenreaders, but maintain layout*/
+.invisible {visibility: hidden;}
+
+/* ==========================================================================
+   CSS3 Transitions
+   ========================================================================== */
+  
+.animateOpacity {@include transition(opacity, 0.2s, ease-in-out);}
+.animateOpacity:hover {opacity:0.6}

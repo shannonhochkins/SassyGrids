@@ -1,0 +1,10 @@
+@mixin background-clip($value){
+  @if $value == padding-box {
+    -webkit-background-clip: $value;
+    -moz-background-clip: padding;
+    background-clip: padding-box;  
+  } @else if $value == text {
+    background-clip: text;
+    -webkit-background-clip: text;    
+  }
+}

@@ -1,0 +1,10 @@
+@mixin radial-gradient($position, $finishingPosition, $colour1, $colour2...) {  
+  background: $colour1;  
+  background: -moz-radial-gradient($position, ellipse cover, $colour1 0%, $colour2 $finishingPosition);
+  background: -webkit-gradient(radial, $position $position, 0px, $position $position, $finishingPosition, color-stop(0%, $colour1), color-stop($finishingPosition, $colour2));
+  background: -webkit-radial-gradient($position, ellipse cover, $colour1 0%, $colour2 $finishingPosition);
+  background: -o-radial-gradient($position, ellipse cover, $colour1 0%, $colour2 $finishingPosition);
+  background: -ms-radial-gradient($position, ellipse cover, $colour1 0%, $colour2 $finishingPosition);
+  background: radial-gradient(ellipse at $position, $colour1 0%, $colour2 $finishingPosition);  
+  filter:progid:DXImageTransform.Microsoft.Alpha(style=2, startX=-50, finishX=50, startY=-50, finishY=50);  
+}

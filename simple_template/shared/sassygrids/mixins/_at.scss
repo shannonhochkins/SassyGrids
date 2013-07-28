@@ -1,0 +1,61 @@
+
+
+
+@mixin at($mediaBreaks...){
+  @if $noErrors {
+    @if $isAuto {
+      @each $break in $mediaBreaks {
+        @if $break == 'all'{
+            @for $i from 1 through $breakPoints {
+              $reCount: $i - 1;
+              @if $i == 1 {$reCount:0;}
+              @include minmax($breakWidth * $reCount, $breakWidth * ($reCount + 1), 0){
+                @content;
+              }
+            }      
+        } @else {
+          @if $break > $breakPoints or $break == 0 {
+            @warn "You entered a break value of #{$break}, the value entered is larger than the current number of breaks set or less than the value.";
+          } 
+          @else {
+            @include minmax(($breakWidth * ($break - 1)) + 1, $breakWidth * ($break), 0){
+              @content;
+            }   
+          }  
+        } 
+      }
+    } @else { 
+        @each $break in $mediaBreaks {
+          @if $break == 'all'{
+            $t: 1;
+            @while $t < totalBreaks() {
+              $leftAll:bv($t);
+              @if $break == totalBreaks(){              
+                @include minmax(null,$leftAll, 0){
+                  @content;
+                }
+              } @else {
+                $rightAll:bv($t + 1);
+                @include minmax($leftAll, $rightAll, 0){
+                  @content;
+                }
+              }
+              $t: $t + 1;
+            }      
+        } 
+        @else {
+          @if $break >= totalBreaks() or $break == 0 {
+            @warn "You entered a break value of #{$break}, the value entered is larger than the current number of breaks set or less than the value.";
+          }
+          @else {
+            $left:bv($break);          
+            $right:bv($break + 1);
+            @include minmax($left, $right - 1, 0){
+              @content;
+            }
+          }         
+        }  
+      }  
+    }
+  }
+}

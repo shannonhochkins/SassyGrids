@@ -1,0 +1,4 @@
+// Srtips the units from a value. e.g. 12px -> 12
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}

@@ -1,0 +1,36 @@
+
+
+@mixin autoResponsive() {  
+  @if $noErrors {
+    @include minmax(null, $fullWidth){
+      @for $t from 0 through $numberOfColumns {      
+        .gridItem.suffix#{$t}, .gridItem.prefix#{$t} {
+          &.fluid:not(.isolate) {padding-right:0px;padding-left:0px;}
+        }
+      }    
+    }
+    $loopLength:0;
+    @if $isAuto {
+      $loopLength: $breakPoints;
+    } @else {
+      $loopLength: totalBreaks();
+    }
+      
+    @for $i from 1 through $loopLength {
+      $reCount: $i - 1;
+      @if $i == 1 {$reCount:0;}
+      @include minmax($breakWidth * $reCount, $breakWidth * ($reCount + 1) + 1){
+        $loop: $i;
+        $queeryMaxWidth: $breakWidth * $i;
+        $margin: perc(($gutterWidth / 2), $queeryMaxWidth);
+        $width: ((100 / $loop) * $queeryMaxWidth / 100) - $gutterWidth;
+        $fluidWidth: perc($width, $queeryMaxWidth);
+        @for $t from 0 through ($numberOfColumns - 1) {      
+          .grid#{$t + 1} {
+            &.fluid:not(.isolate) {width: #{$fluidWidth}; margin-left:#{$margin}; margin-right:#{$margin};}
+          }        
+        }      
+      }
+    }
+  }
+}

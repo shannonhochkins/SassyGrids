@@ -1,0 +1,31 @@
+// =========== Buttons
+
+@mixin buttons(){
+	@include inline-block();
+	font-size: $button-font-size;
+	color: $button-text-color;
+	margin-top: $vertical-spacing;
+	margin-bottom: $vertical-spacing;
+	@include border-radius($radius);
+	width:auto;
+	padding:10px 20px;
+	position:relative;
+	text-decoration:none;
+	border:0;
+	outline:0;
+}
+
+#{$all-button-types} {
+	@include buttons;
+	padding:5px 40px 5px 10px;
+	margin:0;
+	float:left;
+	background: $brandColour2;
+	@include transition(all 0.3s ease-in-out);	
+	.close {
+		position:absolute; right:0px; top:0px; bottom:0px; text-align:center; width:30px;display:block; background: darken($brandColour2,30%); color:white;
+	}	
+	&:hover {
+		background: darken($brandColour2,10%);
+	}
+}

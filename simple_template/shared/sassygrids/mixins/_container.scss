@@ -1,0 +1,5 @@
+@mixin container() {
+  @if $noErrors {
+    width: strip-units($fullWidth) + px;
+  }
+} 

@@ -1,0 +1,248 @@
+/* Body - fonts
+----------------------------------------------- */
+/* Global
+----------------------------------------------- */
+/* Font Specific Settings
+----------------------------------------------- */
+/* Form Settings 
+----------------------------------------------- */
+/* Tables
+----------------------------------------------- */
+/* Button settings
+----------------------------------------------- */
+/* Site colour variables
+----------------------------------------------- */
+/* Settings for SassyGrids 
+----------------------------------------------------------------------------------------------------*/
+/* Float Classes */
+.floatRight {
+  float: right;
+  vertical-align: top; }
+
+.floatLeft {
+  float: left;
+  vertical-align: top; }
+
+.clearLeft {
+  clear: left; }
+
+.clearRight {
+  clear: right; }
+
+.clearBoth {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
+
+/* Hides from IE-mac \*/
+* html .clearFix {
+  height: 1%; }
+
+/* End hide from IE-mac */
+.inlineBlock {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto; }
+
+.disableScroll {
+  overflow-y: hidden; }
+
+/*Text Classes*/
+.textAlignLeft {
+  text-align: left; }
+
+.textAlignRight {
+  text-align: right; }
+
+.textAlignCenter {
+  text-align: center; }
+
+.textAlignJustify {
+  text-align: justify; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+.defaultText {
+  text-transform: none; }
+
+.bold {
+  font-weight: bold; }
+
+.light {
+  font-weight: lighter; }
+
+.normal {
+  font-weight: normal; }
+
+.black {
+  color: black; }
+
+.white {
+  color: white; }
+
+.disableChildren > * {
+  filter: alpha(opactiy=50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opactiy=50)";
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  zoom: 1; }
+
+.noMargin {
+  margin: 0; }
+
+.horizontalMargin {
+  margin-left: 25pxpx;
+  margin-right: 25pxpx; }
+
+.verticalMargin {
+  margin-top: 25pxpx;
+  margin-bottom: 25pxpx; }
+
+.bothMargins {
+  margin: 25pxpx 25pxpx; }
+
+.marginTop {
+  margin-top: 25pxpx; }
+
+.marginRight {
+  margin-right: 25pxpx; }
+
+.marginBottom {
+  margin-bottom: 25pxpx; }
+
+.marginLeft {
+  margin-left: 25pxpx; }
+
+.marginTopDouble {
+  margin-top: 50pxpx; }
+
+.marginRightDouble {
+  margin-right: 50pxpx; }
+
+.marginBottomDouble {
+  margin-bottom: 50pxpx; }
+
+.marginLeftDouble {
+  margin-left: 50pxpx; }
+
+.noMarginTop {
+  margin-top: 0px; }
+
+.noMarginRight {
+  margin-right: 0px; }
+
+.noMarginBottom {
+  margin-bottom: 0px; }
+
+.noMarginLeft {
+  margin-left: 0px; }
+
+.noPadding {
+  padding: 0; }
+
+.hideText {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none; }
+
+.slanted span {
+  background: red; }
+.slanted span:before {
+  border-bottom: 15px solid red;
+  border-left: 4px solid transparent;
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  height: 0;
+  left: -4px;
+  top: 3px;
+  width: 0;
+  position: relative; }
+.slanted span:after {
+  border-top: 15px solid red;
+  border-right: 4px solid transparent;
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  height: 0;
+  left: 4px;
+  top: 3px;
+  width: 0;
+  position: relative; }
+
+.fillWidth {
+  width: auto;
+  height: auto;
+  max-width: 100%; }
+
+.fillHeight {
+  width: auto;
+  height: auto;
+  max-height: 100%; }
+
+/* Chrome Frame prompt  */
+.chromeFrame {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* Image replacement */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden, #simplemodal-data .hiddenModal {
+  display: none; }
+
+/*Hide only visually, but have it available for screenreaders: h5bp.com/v*/
+.visuallyHidden {
+  visibility: hidden !important;
+  display: block !important; }
+
+/* Hide visually and from screenreaders, but maintain layout*/
+.invisible {
+  visibility: hidden; }
+
+/* ==========================================================================
+   CSS3 Transitions
+   ========================================================================== */
+.animateOpacity {
+  -webkit-transition: opacity, 0.2s, ease-in-out;
+  -moz-transition: opacity, 0.2s, ease-in-out;
+  transition: opacity, 0.2s, ease-in-out; }
+
+.animateOpacity:hover {
+  opacity: 0.6; }

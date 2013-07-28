@@ -1,0 +1,47 @@
+
+
+
+$columnExceededWarning: "Please make sure you only use a value less than or equal to the number of columns";
+$fullWidth:($columnWidth * $numberOfColumns) +  ($gutterWidth * $numberOfColumns);
+$breakWidth:0;
+$isAuto:false;
+$noErrors:false;
+$breakPoints:0;
+$mainErrorMessage: 'You have not defined your variables properly in the setup, please refer to the documentation on how to set up sassy grids.';
+@if length($breakDimensions) >= 1 {
+  @if nth($breakDimensions,1) == auto {
+    @if length($breakDimensions) == 2 {
+      $isAuto: true;
+      $noErrors:true;
+      $breakPoints:nth($breakDimensions, 2);
+      $breakWidth: $fullWidth / $breakPoints;      
+    } @else {      
+      @warn 'Second parameter of $breakDimensions is either wrong or not defined';
+    }
+  } @else {
+    $noErrors:true;
+  }
+} @else {
+  @warn 'Please define at least one break point in the $breakDimensions (you have set it up (#{$breakDimensions}) variable eg. $breakDimensions:100 300 500 600 800';
+}
+
+@import 'gw';
+@import 'autoResponsive';
+@import 'minmax';
+@import 'at';
+@import 'from';
+@import 'between';
+@import 'to';
+@import 'cols';
+@import 'gutter';
+@import 'container';
+@import 'push';
+@import 'pull';
+@import 'pre';
+@import 'post';
+@import 'filler';
+@import 'centerCol';
+@import 'respond-to';
+@import 'suffix';
+@import 'prefix';
+@import 'sassyGradient';

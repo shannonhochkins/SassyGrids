@@ -1,0 +1,32 @@
+
+
+//************************************************************************//
+// Generate a variable ($all-text-inputs) with a list of all html5
+// input types that have a text-based input, excluding textarea.
+// http://diveintohtml5.org/forms.html
+//************************************************************************//
+$inputs-list: 'input[type="email"]','input[type="number"]','input[type="password"]','input[type="search"]','input[type="tel"]','input[type="text"]','input[type="url"]','input[type="color"]','input[type="date"]','input[type="datetime"]','input[type="datetime-local"]','input[type="month"]','input[type="time"]','input[type="week"]';              
+$button-list:  'input[type="submit"]','input[type="button"]','input[type="image"]','input[type="reset"]','input[type="image"]','button';              
+$submit-list: 'input[type="submit"]','button[type="submit"]','input[type="reset"]'; 
+$unquoted-inputs-list: ();
+$unquoted-button-list: ();
+$unquoted-submit-list: ();
+@each $input-type in $inputs-list {
+  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma);
+}
+@each $button-type in $button-list {
+  $unquoted-button-list: append($unquoted-button-list, unquote($button-type), comma);
+}
+@each $submit-type in $submit-list {
+  $unquoted-submit-list: append($unquoted-submit-list, unquote($submit-type), comma);
+}
+$all-text-inputs: $unquoted-inputs-list;
+$all-button-types: $unquoted-button-list;
+$all-submit-types: $unquoted-submit-list;
+
+// Example
+//************************************************************************//
+//   #{$all-text-inputs}, textarea {
+//     border: 1px solid red;
+//   }
+

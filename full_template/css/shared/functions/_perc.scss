@@ -1,0 +1,9 @@
+
+//will calculate a percentage based on the parent width provided
+
+// Example: What is 50 as a percentage of 1000 perc(50, 1000); 
+// >> Returns 5%
+
+@function perc($target, $parent: 1000) {
+  @return (($target / $parent) * 100%);
+}

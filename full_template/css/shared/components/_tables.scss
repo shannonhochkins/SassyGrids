@@ -1,0 +1,33 @@
+// =========== Tables
+
+table, .table {
+    border: $table-border-size solid $table-border-color;
+    border-collapse: separate;
+    border-spacing: 0;
+    @include border-radius($radius);
+    margin-bottom: $vertical-spacing;
+    width: 100%;
+    &.table-bordered thead tr, thead th {
+        background: $table-header-background-color;
+        color: $table-header-text-color;
+        border: $table-border-size solid $table-border-color;
+        font-weight: bold;
+        padding: 0.5em;
+        text-align: left;
+        padding: 8px 25px;
+        text-align: left;
+    }
+    tbody tr  {background: $table-row-background-color;
+        &:nth-child(2n+2) { background: $table-row-alt-background-color }
+    }
+
+    tbody td {
+        color:$table-body-text-color;
+        padding: 8px 25px;
+        border-left: 1px solid $table-border-color;
+        border-top: 1px solid $table-border-color;
+        padding: 0.5em;
+        &:first-child { border-left: 0; }
+    }
+}
+

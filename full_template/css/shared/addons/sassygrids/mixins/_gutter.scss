@@ -1,0 +1,19 @@
+@mixin gutter($fluid: false, $marginLeft: true, $marginRight: true){
+  @if $noErrors {
+    @if $fluid == true {
+      @if $marginLeft == true {
+        margin-left:perc($gutterWidth / 2, $fullWidth);  
+      }
+      @if $marginRight == true {
+        margin-right:perc($gutterWidth / 2, $fullWidth);  
+      }
+    } @else {
+      @if $marginLeft == true {
+        margin-left:($gutterWidth / 2) + px;  
+      }
+      @if $marginRight == true {
+        margin-right:($gutterWidth / 2) + px;  
+      }
+    }
+  } 
+} 

@@ -1,0 +1,27 @@
+@mixin slanted-highlight($bgcolor, $element: span) {
+  #{$element} {
+    background:$bgcolor;
+  }
+  #{$element}:before {
+    border-bottom:15px solid $bgcolor; 
+    border-left:4px solid transparent; 
+    content:""; 
+    @include inline-block();
+    height:0; 
+    left:-4px; 
+    top:3px; 
+    width:0;
+    position:relative;
+  }
+  #{$element}:after {
+    border-top:15px solid $bgcolor;
+    border-right:4px solid transparent; 
+    content:"";    
+    @include inline-block();
+    height:0; 
+    left:4px; 
+    top:3px; 
+    width:0; 
+    position:relative;
+  }
+}

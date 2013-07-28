@@ -1,0 +1,12 @@
+@mixin sassyGradient($c1: #111, $c2:#777, $dir: 90deg, $fw: $fullWidth, $gw: $gutterWidth, $cw: $columnWidth) {
+  @if $noErrors {
+    $cwAndGut: $cw + $gw;
+    $colWidth: $cw / $cwAndGut * 100%;
+    $gutter: $gw / $cwAndGut * 100%;
+    $halfGutter: ($gw / 2) / $fw * 100%;
+    background-color: #{$c1};
+    background-image: linear-gradient(#{$dir}, unquote("transparent #{$colWidth}, #{$c2} #{$gutter}"));
+    background-size: $cwAndGut / $fw * 100%, ($fw - ($gw /2)) / $fw * 100%;
+    background-position: $halfGutter, $halfGutter;
+  }
+}

@@ -1,0 +1,7 @@
+//@mixin rotate($degree...)                     {@include prefixer(transform, rotate($degree + deg), webkit moz ms o spec);-webkit-backface-visibility: hidden;}
+@mixin rotate($degrees...) {
+    @include prefixer(transform, rotate($degrees + deg), webkit moz o spec);
+    filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees + deg)}, M12=-#{sin($degrees + deg)}, M21=#{sin($degrees + deg)}, M22=#{cos($degrees + deg)});
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees + deg)}, M12=-#{sin($degrees + deg)}, M21=#{sin($degrees + deg)}, M22=#{cos($degrees + deg)})";
+    zoom: 1;
+}

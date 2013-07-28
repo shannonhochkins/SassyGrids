@@ -1,0 +1,22 @@
+
+
+@mixin minmax($minWidth, $maxWidth, $ditchAddition: 1) {
+  @if $noErrors {
+    @if $minWidth != null{
+      $minWidth: strip-units($minWidth);
+    }
+    @if $maxWidth != null{
+      $maxWidth: strip-units($maxWidth);
+    }  
+    $px : px;  
+    @if $minWidth != null and $maxWidth != null {
+      @media screen and (min-width: ($minWidth)#{$px}) and (max-width: ($maxWidth - $ditchAddition)#{$px}) { @content; }
+    }
+    @else if $minWidth != null {
+      @media screen and (min-width: $maxWidth#{$px}) { @content; }  
+    }
+    @else if $maxWidth != null {
+      @media screen and (max-width: $maxWidth#{$px}) { @content; }  
+    }    
+  }
+}

@@ -1,0 +1,336 @@
+/* Body - fonts
+----------------------------------------------- */
+/* Global
+----------------------------------------------- */
+/* Font Specific Settings
+----------------------------------------------- */
+/* Form Settings 
+----------------------------------------------- */
+/* Tables
+----------------------------------------------- */
+/* Button settings
+----------------------------------------------- */
+/* Site colour variables
+----------------------------------------------- */
+/* Settings for SassyGrids 
+----------------------------------------------------------------------------------------------------*/
+body .gridContainer div[class^="grid"] {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+@media screen and (max-width: 960px) {
+  body .gridContainer.fluid {
+    width: 96%;
+    margin: 0 2%; } }
+@media screen and (max-width: 960px) {
+  body .gridItem.suffix0.fluid:not(.isolate), body .gridItem.prefix0.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix1.fluid:not(.isolate), body .gridItem.prefix1.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix2.fluid:not(.isolate), body .gridItem.prefix2.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix3.fluid:not(.isolate), body .gridItem.prefix3.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix4.fluid:not(.isolate), body .gridItem.prefix4.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix5.fluid:not(.isolate), body .gridItem.prefix5.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix6.fluid:not(.isolate), body .gridItem.prefix6.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix7.fluid:not(.isolate), body .gridItem.prefix7.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix8.fluid:not(.isolate), body .gridItem.prefix8.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix9.fluid:not(.isolate), body .gridItem.prefix9.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix10.fluid:not(.isolate), body .gridItem.prefix10.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix11.fluid:not(.isolate), body .gridItem.prefix11.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix12.fluid:not(.isolate), body .gridItem.prefix12.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix13.fluid:not(.isolate), body .gridItem.prefix13.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix14.fluid:not(.isolate), body .gridItem.prefix14.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix15.fluid:not(.isolate), body .gridItem.prefix15.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; }
+  body .gridItem.suffix16.fluid:not(.isolate), body .gridItem.prefix16.fluid:not(.isolate) {
+    padding-right: 0px;
+    padding-left: 0px; } }
+@media screen and (min-width: 0px) and (max-width: 240px) {
+  body .grid1.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid2.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid3.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid4.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid5.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid6.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid7.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid8.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid9.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid10.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid11.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid12.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid13.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid14.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid15.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; }
+  body .grid16.fluid:not(.isolate) {
+    width: 91.66667%;
+    margin-left: 4.16667%;
+    margin-right: 4.16667%; } }
+@media screen and (min-width: 240px) and (max-width: 480px) {
+  body .grid1.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid2.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid3.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid4.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid5.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid6.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid7.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid8.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid9.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid10.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid11.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid12.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid13.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid14.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid15.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; }
+  body .grid16.fluid:not(.isolate) {
+    width: 45.83333%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%; } }
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  body .grid1.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid2.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid3.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid4.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid5.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid6.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid7.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid8.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid9.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid10.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid11.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid12.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid13.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid14.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid15.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+  body .grid16.fluid:not(.isolate) {
+    width: 30.55556%;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; } }
+@media screen and (min-width: 720px) and (max-width: 960px) {
+  body .grid1.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid2.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid3.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid4.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid5.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid6.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid7.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid8.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid9.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid10.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid11.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid12.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid13.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid14.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid15.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; }
+  body .grid16.fluid:not(.isolate) {
+    width: 22.91667%;
+    margin-left: 1.04167%;
+    margin-right: 1.04167%; } }

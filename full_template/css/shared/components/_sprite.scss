@@ -1,0 +1,23 @@
+// =========== Icons
+
+
+.sprite {background: url('url.jpg') top left no-repeat;
+  .classname1 {background-position:0 -30px;}
+  .classname2 {background-position:0 -30px;}
+  .classname3 {background-position:0 -30px;}
+}
+
+//For retina displays, include an example duplicate of the first sprite, just double the resolution, then we can tackle sprites for retina displays like so:
+
+.sprite {
+  @include retina(){background: url('url@2X.jpg') top left no-repeat;
+  
+    .classname1 {background-position:0 -60px;}
+    .classname2 {background-position:0 -60px;}
+    .classname3 {background-position:0 -60px;}
+    //or if it's a totally different image you want to use    
+    
+  }
+  .classname4 {@include image2X('src', 0 -15 no-repat);}
+}
+

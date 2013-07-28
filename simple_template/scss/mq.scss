@@ -1,0 +1,10 @@
+@import '../shared/sassygrids/sassygrids';
+body {
+  @include at(1){}
+  @include between(2 3){}
+  @include to(1){}
+  @include from(1){}
+  @include minmax(1,500){}
+  @include respond-to(medium){}
+  @include autoResponsive();
+}   
