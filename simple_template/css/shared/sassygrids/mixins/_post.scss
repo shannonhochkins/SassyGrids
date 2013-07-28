@@ -3,7 +3,13 @@
     @if $n > $numberOfColumns {
       @warn $columnExceededWarning;
     } @else {
-      margin-right: gw($n, $fluid, $addMargin);
-    }
+    	$post:gw($n, false, $addMargin, false);
+    	$postGutter:$pre + ($gutterWidth / 2);
+    	@if $fluid {
+			margin-right: perc($postGutter, $fullWidth);
+    	}@else {
+    		margin-right: $postGutter + px;	
+    	}      	
+    }  
   }
 }
