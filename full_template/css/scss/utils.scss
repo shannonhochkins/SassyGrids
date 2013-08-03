@@ -33,7 +33,7 @@
 .disableChildren > *  {@include opacity(0.5);}
 
 //Set margins for UI elements.
-$marginBase: $vertical-spacing;
+$marginBase: strip-units($vertical-spacing);
 .noMargin           {margin:0;}
 .horizontalMargin   {margin-left:$marginBase + px; margin-right:$marginBase + px;}
 .verticalMargin     {margin-top:$marginBase + px; margin-bottom:$marginBase + px;}

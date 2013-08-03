@@ -25,6 +25,18 @@ $fluidList: oneCol twoCols threeCols fourCols fiveCols sixCols sevenCols eightCo
 } 
 #{$pushPull}   {position:relative;  }      
   
+
+/* Fluid Classes
+----------------------------------------------------------------------------------------------------*/
+
+$gut: perc($gutterWidth);
+@for $i from 1 through length($fluidList){
+      $fluidClasses: join($fluidClasses, unquote(".#{nth($fluidList, $i)}"), comma);
+      .#{nth($fluidList, $i)} {width:(100% / $i) - $gut; margin-right: ($gut / 2); margin-left: ($gut / 2);
+            &.noMargin {width:100% / $i; margin-left:0; margin-right:0;}
+      }
+}
+ #{$fluidClasses} {float: left; display: inline-block; vertical-align: baseline; zoom: 1; *display: inline; *vertical-align: auto;}
      
 /* Total Columns >> #{$numberOfColumns}         
     ----------------------------------------------------------------------------------------------------*/
@@ -73,17 +85,16 @@ $fluidList: oneCol twoCols threeCols fourCols fiveCols sixCols sevenCols eightCo
     }     
   }
 } 
-/* Fluid Classes
-----------------------------------------------------------------------------------------------------*/
 
-$gut: perc($gutterWidth);
-@for $i from 1 through length($fluidList){
-      $fluidClasses: join($fluidClasses, unquote(".#{nth($fluidList, $i)}"), comma);
-      .#{nth($fluidList, $i)} {width:(100% / $i) - $gut; margin-right: ($gut / 2); margin-left: ($gut / 2);
-            &.noMargin {width:100% / $i; margin-left:0; margin-right:0;}
+body.debug {
+  .gridContainer, .gridContainerDemo {
+    @for $grid from 1 through $numberOfColumns {
+      .grid#{$grid}, .gridItem[data-val="#{$grid}"], #{$fluidClasses}         {&:after{content:"#{$grid}"; width:20px; height:20px; background-color:$brandColour2; color:invert($brandColour2); position:absolute; top:50%; margin-top:-10px; right:0px;display:block;text-align:center;z-index:999;}} 
+      @for $i from 1 through length($fluidList){        
+        .#{nth($fluidList, $i)} {&:after {content:'#{nth($fluidList, $i)}';width:auto;}}
       }
+    }
+  } 
 }
- #{$fluidClasses} {float: left; display: inline-block; vertical-align: baseline; zoom: 1; *display: inline; *vertical-align: auto;}
-
 
 
