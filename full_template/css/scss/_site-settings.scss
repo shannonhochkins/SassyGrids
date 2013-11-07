@@ -1,9 +1,8 @@
-
 /* Body - fonts
 ----------------------------------------------- */
 
 $body-font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-$body-font-weight: 100;
+$body-font-weight: 300;
 $body-font-style: normal;
 $body-text-rendering: optimizeLegibility;
 
@@ -13,7 +12,7 @@ $body-text-rendering: optimizeLegibility;
 $vertical-spacing: 25px;		// used for spacing throughout the site
 $radius:3px;					// You can use this variable throughout your site to globalize border-radius size
 $text-direction:ltr;			// Change the direction of text flow
-$min-page-width:1000;			// Set a minimum page width so that the browser doesn't squash everything
+$min-page-width:1000px;			// Set a minimum page width so that the browser doesn't squash everything
 
 /* Font Specific Settings
 ----------------------------------------------- */ 
@@ -23,7 +22,7 @@ $line-height: 25px;				// Global line-height
 $font-smoothing: antialiased;   // Font smoothing
 
 $header-font-family: 'Arial', sans-serif;
-$header-font-weight: 100;
+$header-font-weight: 300;
 $header-font-style: normal;
 $header-font-color: #fff; 
 $header-line-height: normal;
@@ -67,7 +66,7 @@ $table-border-size:1px;
 $button-font-size:13px;
 $button-text-color:#fff;  
 
-// Helpful variables 
+// Helpful variables
 $i:!important;					// Shortcut for the !important tag
 
 /* Site colour variables
