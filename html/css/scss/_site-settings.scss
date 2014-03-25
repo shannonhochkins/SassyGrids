@@ -29,7 +29,6 @@ $header-line-height: normal;
 $header-top-margin: 0; 
 $header-bottom-margin: 20px; 
 $header-text-rendering: optimizeLegibility; 
-
 								
 $h1-font-size:26px;				// Header Sizes (converted to ems)
 $h2-font-size:22px;				// Header Sizes (converted to ems)
@@ -56,7 +55,7 @@ $table-header-text-color:#1abc9c;
 $table-body-text-color:#fff;
 $table-row-background-color:#222; 
 $table-row-alt-background-color:darken(#222,3%);
-$table-border-color:#111;  
+$table-border-color:#111; 
 $table-border-size:1px;
 
 
@@ -72,14 +71,14 @@ $i:!important;					// Shortcut for the !important tag
 /* Site colour variables
 ----------------------------------------------- */
 
-$brandColour1:#34495e;
-$brandColour2:#1abc9c;
+$brandColour1:#f1f1f1;
+$brandColour2:#dddddd;
 $brandColour3:blue;
 $brandColour4:orange;
 
 $linkColor:                           #16a085 !default;
 $linkHoverColor:                      #08c    !default;
-$body-background: 					  #000000 !default;
+$body-background: 					  #111 !default;
 $body-color:                          #ffffff !default; 
 
 $warningText:                         #c09853 !default;
