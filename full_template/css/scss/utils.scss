@@ -6,14 +6,15 @@
 .clearLeft        {clear:left;}
 .clearRight       {clear:right;}
 .clearBoth        {clear:both;}
-.clearfix         {@include clearfix();}
+.clearfix,.clearFix{@include clearfix();}
 /* Hides from IE-mac \*/
 * html .clearFix  { height: 1%; }
 /* End hide from IE-mac */
-.inlineBlock      {@include inline-block();}
-
-.disableScroll    {overflow-y: hidden;}
-
+.inline-block     {@include inline-block();}
+.relative 		  {position:relative;}
+.absolute 		  {position:absolute;}
+.fixed 		      {position:fixed;}
+ 
 /*Text Classes*/
 .textAlignLeft    {text-align:left;}
 .textAlignRight   {text-align:right;}
@@ -22,17 +23,11 @@
 .uppercase        {text-transform:uppercase;}
 .capitalize       {text-transform:capitalize;}
 .lowercase        {text-transform:lowercase;}
-.defaultText      {text-transform:none;}
 .bold             {font-weight:bold;}
 .light            {font-weight:lighter;}
 .normal           {font-weight:normal;} 
-.black            {color:black;}
-.white            {color:white;}
 
 
-.disableChildren > *  {@include opacity(0.5);}
-
-//Set margins for UI elements.
 $marginBase: strip-units($vertical-spacing);
 .noMargin           {margin:0;}
 .horizontalMargin   {margin-left:$marginBase + px; margin-right:$marginBase + px;}
@@ -53,10 +48,13 @@ $marginBase: strip-units($vertical-spacing);
 
 
 .noPadding          {padding:0;}
+.noPaddingLeft      {padding-left:0px;}
+.noPaddingRight     {padding-right:0px;}
+.noPaddingTop       {padding-top:0px;}
+.noPaddingBottom    {padding-bottom:0px;}
 
 .hideText			{@include hide-text();}
 .slanted			{@include slanted-highlight(red, span)}
-
 
 .fillWidth        {width:auto; height: auto; max-width:100%;}
 .fillHeight       {width:auto; height: auto; max-height:100%;}
@@ -72,10 +70,3 @@ $marginBase: strip-units($vertical-spacing);
 .visuallyHidden {visibility:hidden !important; display:block !important;}
 /* Hide visually and from screenreaders, but maintain layout*/
 .invisible {visibility: hidden;}
-
-/* ==========================================================================
-   CSS3 Transitions
-   ========================================================================== */
-  
-.animateOpacity {@include transition(opacity, 0.2s, ease-in-out);}
-.animateOpacity:hover {opacity:0.6}

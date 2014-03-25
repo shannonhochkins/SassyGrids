@@ -10,8 +10,12 @@
 		"helpers/prefixer",
 		"helpers/respond-to",
 		"helpers/retina-image",
-		"helpers/timing-functions",
+		"helpers/timing-functions",	
+		"helpers/disable-filters",	
 		"helpers/triangle";
+
+// Animation mixins
+@import "animation_presets/animate.scss";
 
 
 // Custom Functions
