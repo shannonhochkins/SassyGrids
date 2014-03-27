@@ -1,3 +1,0 @@
-@mixin background-size($dim1, $dim2...)   {
-  @include prefixer(background-size, $dim1 $dim2, all);
-}

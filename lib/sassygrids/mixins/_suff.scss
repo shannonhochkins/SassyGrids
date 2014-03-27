@@ -1,0 +1,9 @@
+@mixin suff($n, $fluid: false, $addMargin: true){
+  @if $noErrors {
+    @if $n > $numberOfColumns {
+      @warn $columnExceededWarning;
+    } @else {
+      padding-right: gw($n, $fluid, $addMargin);  
+    }  
+  }
+}

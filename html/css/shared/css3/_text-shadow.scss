@@ -1,3 +1,0 @@
-@mixin text-shadow($val...) {
-  @include prefixer(text-shadow, $val, all);
-}

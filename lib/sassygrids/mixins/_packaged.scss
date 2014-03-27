@@ -1,0 +1,152 @@
+
+
+
+$columnExceededWarning: "Please make sure you only use a value less than or equal to the number of columns";
+$fullWidth:($columnWidth * $numberOfColumns) +  ($gutterWidth * $numberOfColumns);
+$breakWidth:0;
+$isAuto:false;
+$noErrors:false;
+$breakPoints:0;
+$mainErrorMessage: 'You have not defined your variables properly in the setup, please refer to the documentation on how to set up sassy grids.';
+@if length($breakDimensions) >= 1 {
+  @if nth($breakDimensions,1) == auto {
+    @if length($breakDimensions) == 2 {
+      $isAuto: true;
+      $noErrors:true;
+      $breakPoints:nth($breakDimensions, 2);
+      $breakWidth: $fullWidth / $breakPoints;      
+    } @else {      
+      @warn 'Second parameter of $breakDimensions is either wrong or not defined';
+    }
+  } @else {
+    $noErrors:true;
+  }
+} @else {
+  @warn 'Please define at least one break point in the $breakDimensions (you have set it up (#{$breakDimensions}) variable eg. $breakDimensions:100 300 500 600 800';
+}
+
+/* Import Mixins used by SassyGrids
+----------------------------------------------------------- -----------------------------------------*/        
+
+@import "gw",
+        "autoResponsive",
+        "minmax",
+        "at",
+        "from",
+        "between",
+        "to",
+        "cols",
+        "gutter",
+        "container",
+        "push",
+        "pull",
+        "pre",
+        "post",
+        "filler",
+        "centerCol",
+        "respond-to",
+        "suff",
+        "pref",
+        "sassyGradient";
+
+/* Import Functions used by SassyGrids
+----------------------------------------------------------- -----------------------------------------*/        
+
+@import "perc";
+
+
+/* ADVANCED EDITING - EDIT AT OWN RISK - Generates grid system css
+----------------------------------------------------------- -----------------------------------------*/
+      
+/* Container      
+----------------------------------------------------------------------------------------------------*/
+.gridContainer {margin:0 auto; @include container();}   
+            
+                                                    
+/* Grid >> Global                         
+----------------------------------------------------------------------------------------------------*/
+$classes: ();   
+$pushPull: (); 
+$fluidClasses:();   
+$fluidList: oneCol twoCols threeCols fourCols fiveCols sixCols sevenCols eightCols nineCols tenCols;
+@for $i from 1 through $numberOfColumns {
+    $classes: join($classes, unquote(".grid#{$i} "), comma);
+    $pushPull: join($pushPull, unquote(".pull#{$i}, .push#{$i}, .pre#{$i}, .post#{$i} "), comma);
+}
+  
+#{$classes}   {display:inline;float: left;position: relative;
+  &.fluid     {@include gutter(true);}
+} 
+#{$pushPull}   {position:relative;  }      
+  
+
+/* Fluid Classes
+----------------------------------------------------------------------------------------------------*/
+
+$gut: perc($gutterWidth);
+@for $i from 1 through length($fluidList){
+      $fluidClasses: join($fluidClasses, unquote(".#{nth($fluidList, $i)}"), comma);
+      .#{nth($fluidList, $i)} {width:(100% / $i) - $gut; margin-right: ($gut / 2); margin-left: ($gut / 2);
+            &.noMargin {width:100% / $i; margin-left:0; margin-right:0;}
+      }
+}
+ #{$fluidClasses} {float: left; display: inline-block; vertical-align: baseline; zoom: 1; *display: inline; *vertical-align: auto;}
+     
+/* Total Columns >> #{$numberOfColumns}         
+    ----------------------------------------------------------------------------------------------------*/
+.gridContainer {
+  @for $grid from 1 through $numberOfColumns {
+    .grid#{$grid}         {@include cols($grid);
+      &.centerCol         {@include centerCol($grid, false);}
+      &.noMargin          {@include cols($grid, false, true, false, 0, false);}
+      &.alpha             {margin-left: 0;}
+      &.omega             {margin-right: 0;}   
+      &.fluid             {@include cols($grid, true);  
+        &.noMargin        {@include cols($grid, true, true, false, 0, false);} 
+        &.centerCol       {@include centerCol($grid, true);}  
+      }      
+    }
+    [class*="grid"].prefix#{$grid}        {@include pref($grid, false, true);
+      &.fluid                             {@include pref($grid, true, true);}         
+    } 
+    [class*="grid"].suffix#{$grid}        {@include suff($grid, false, true); 
+      &.fluid                             {@include suff($grid, true, true);}
+    }
+    [class*="grid"].push#{$grid}          {@include push($grid, false, true);
+      &.fluid                             {@include push($grid, true, true);} 
+    } 
+    [class*="grid"].pull#{$grid}          {@include pull($grid, false, true);    
+      &.fluid                             {@include pull($grid, true, true);}
+    } 
+    [class*="grid"].pre#{$grid}           {@include pre($grid, false, true);
+      &.fluid                             {@include pre($grid, true, true);}
+    }
+    [class*="grid"].post#{$grid}          {@include post($grid, false, true);
+      &.fluid                             {@include post($grid, true, true);}
+    }     
+    
+    &.fluid {
+      .grid#{$grid}       {@include cols($grid, true);
+        &.centerCol       {@include centerCol($grid, true);}
+        &.noMargin        {@include cols($grid, false, true, false, 0, false);} 
+      }      
+      [class*="grid"].prefix#{$grid}     {@include pref($grid, true, true);}
+      [class*="grid"].suffix#{$grid}     {@include suff($grid, true, true);}
+      [class*="grid"].push#{$grid}       {@include push($grid, true, true);} 
+      [class*="grid"].pull#{$grid}       {@include pull($grid, true, true);} 
+      [class*="grid"].pre#{$grid}        {@include pre($grid, true, true);}
+      [class*="grid"].post#{$grid}       {@include post($grid, true, true);}     
+    }     
+  }
+} 
+
+body.debug {
+  .gridContainer, .gridContainerDemo {
+    @for $grid from 1 through $numberOfColumns {
+      .grid#{$grid}, .gridItem[data-val="#{$grid}"], #{$fluidClasses}         {&:after{content:"#{$grid}"; width:20px; height:20px; background-color:red; color:invert(red); position:absolute; top:50%; margin-top:-10px; right:0px;display:block;text-align:center;z-index:999;}} 
+      @for $i from 1 through length($fluidList){        
+        .#{nth($fluidList, $i)} {&:after {content:'#{nth($fluidList, $i)}';width:auto;}}
+      }
+    }
+  } 
+}

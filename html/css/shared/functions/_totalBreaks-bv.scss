@@ -1,7 +1,0 @@
-@function totalBreaks(){
-  @return length($breakDimensions);
-}
-
-@function bv($pos){
-  @return nth($breakDimensions, $pos);
-}
