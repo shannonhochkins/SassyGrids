@@ -74,7 +74,7 @@
       &.fluid {
         .grid#{$grid}       {@include cols($grid, true);
           &.centerCol       {@include centerCol($grid, true);}
-          &.noMargin        {@include cols($grid, false, true, false, 0, false);} 
+          &.noMargin        {@include cols($grid, true, true, false, 0, false);} 
         }      
         [class*="grid"].pref#{$grid}     {@include pref($grid, true, true);}
         [class*="grid"].suff#{$grid}     {@include suff($grid, true, true);}
