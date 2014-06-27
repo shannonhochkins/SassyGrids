@@ -1,4 +1,4 @@
-@mixin centerCol($howManyGrids: 0, $fluid: false, $includeColumn: true) {
+@mixin centerCol($howManyGrids: 0, $fluid: false, $includeMargin : false, $includeColumn: true) {
   @if $noErrors {
     $colsRemaining: ($numberOfColumns - $howManyGrids)  / 2;
     @if ($howManyGrids > $numberOfColumns){
@@ -8,11 +8,11 @@
           @include cols($howManyGrids, $fluid, true); 
         }
       @if $fluid {
-        $newMargin: (gw(($colsRemaining), $fluid, true, false));
+        $newMargin: (gw(($colsRemaining), $fluid, $includeMargin, false));
         margin-left:$newMargin + unquote("%");
         margin-right:$newMargin + unquote("%");
       } @else {
-        $newMargin: (gw(($colsRemaining), $fluid, true, false)) + ($gutterWidth );
+        $newMargin: (gw(($colsRemaining), $fluid, $includeMargin, false));
         margin-left:$newMargin + px;
         margin-right:$newMargin + px;  
       }
