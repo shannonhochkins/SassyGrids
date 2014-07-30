@@ -43,13 +43,17 @@
   .gridContainer {
     @for $grid from 1 through $numberOfColumns {
       .grid#{$grid}         {@include cols($grid);
-        &.centerCol         {@include centerCol($grid, false);}
+        &.centerCol         {@include centerCol($grid, false);
+          &.noMargin        {@include centerCol($grid, false, true);}
+        }
         &.noMargin          {@include cols($grid, false, true, false, 0, false);}
         &.alpha             {margin-left: 0;}
         &.omega             {margin-right: 0;}   
         &.fluid             {@include cols($grid, true);  
           &.noMargin        {@include cols($grid, true, true, false, 0, false);} 
-          &.centerCol       {@include centerCol($grid, true);}  
+          &.centerCol       {@include centerCol($grid, true);
+            &.noMargin        {@include centerCol($grid, true, true);}
+          }  
         }      
       }
       [class*="grid"].pref#{$grid}        {@include pref($grid, false, true);
@@ -85,7 +89,7 @@
       }     
     }
   } 
-
+  .SassyDebugWrapper {display:none}
   body.debug {
     .gridContainer, .gridContainerDemo {
       @for $grid from 1 through $numberOfColumns {
@@ -95,5 +99,8 @@
         }
       }
     } 
+    .SassyDebugWrapper {position:absolute; top:0px; left:50%; margin-left:($fullWidth / 2 * -1) + px; width:$fullWidth + px; z-index:100000; height:100%;display:block;
+      .gridContainer {@include sassyGradient(rgba(black, .1), rgba(black, 0.2));display: -moz-inline-stack;display: inline-block;vertical-align: middle;zoom: 1;position:fixed;left:50%;width: gw(24, false, true);    margin-left: - (gw(24,false, true, false) / 2) + px;height:100%; top:0px;}
+    }    
   }
 }
