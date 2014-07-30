@@ -1,17 +1,18 @@
-
-
-
 /* Settings for SassyGrids 
 ----------------------------------------------------------------------------------------------------*/
 
-$columnWidth:       40;
-$numberOfColumns:   16;
-$gutterWidth:       20;
-$breakDimensions:   auto 4;
+$columnWidth:           40;
+$numberOfColumns:       16;
+$gutterWidth:           20;
+$breakDimensions:       auto 4;
+
+$sassy-xsmall:			200;
+$sassy-small:			400;
+$sassy-medium:			600;
+$sassy-large:			800;
+$sassy-xlarge:			1000;
+$sassy-xxlarge:			1200;
+$sassy-xxxlarge:		1400;
 
 //Must keep this import 
 @import 'sassygrids/packaged';
-
-
-
-
