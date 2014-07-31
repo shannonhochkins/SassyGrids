@@ -75,7 +75,7 @@
         &.fluid                             {@include post($grid, true, true);}
       }     
       
-      &.fluid {
+      &.fluid {width:100%;margin:0 auto;
         .grid#{$grid}       {@include cols($grid, true);
           &.centerCol       {@include centerCol($grid, true);}
           &.noMargin        {@include cols($grid, true, true, false, 0, false);} 
