@@ -14,5 +14,7 @@ $sassy-xlarge:			1000;
 $sassy-xxlarge:			1200;
 $sassy-xxxlarge:		1400;
 
+$generateCSS: 			true;
+
 //Must keep this import 
 @import 'sassygrids/packaged';
