@@ -4,8 +4,7 @@
     
 
     /* ADVANCED EDITING - EDIT AT OWN RISK - Generates grid system css
-    ----------------------------------------------------------- -----------------------------------------*/
-          
+    ----------------------------------------------------------- -----------------------------------------*/          
     /* Container      
     ----------------------------------------------------------------------------------------------------*/
     .gridContainer {margin:0 auto; @include container();}   
@@ -43,6 +42,7 @@
     /* Generate the css for each column, as well as each class available for each column.   
         ----------------------------------------------------------------------------------------------------*/
     .gridContainer {
+      &.fluid {width:100%;margin:0 auto;}
       @for $grid from 1 through $numberOfColumns {
         .grid#{$grid}         {@include cols($grid);
           &.centerCol         {@include centerCol($grid, false);
@@ -58,36 +58,36 @@
             }  
           }      
         }
-        [class*="grid"].pref#{$grid}        {@include pref($grid, false, true);
+        .pref#{$grid}        {@include pref($grid, false, true);
           &.fluid                             {@include pref($grid, true, true);}         
         } 
-        [class*="grid"].suff#{$grid}        {@include suff($grid, false, true); 
+        .suff#{$grid}        {@include suff($grid, false, true); 
           &.fluid                             {@include suff($grid, true, true);}
         }
-        [class*="grid"].push#{$grid}          {@include push($grid, false, true);
+        .push#{$grid}          {@include push($grid, false, true);
           &.fluid                             {@include push($grid, true, true);} 
         } 
-        [class*="grid"].pull#{$grid}          {@include pull($grid, false, true);    
+        .pull#{$grid}          {@include pull($grid, false, true);    
           &.fluid                             {@include pull($grid, true, true);}
         } 
-        [class*="grid"].pre#{$grid}           {@include pre($grid, false, true);
+        .pre#{$grid}           {@include pre($grid, false, true);
           &.fluid                             {@include pre($grid, true, true);}
         }
-        [class*="grid"].post#{$grid}          {@include post($grid, false, true);
+        .post#{$grid}          {@include post($grid, false, true);
           &.fluid                             {@include post($grid, true, true);}
         }     
         
-        &.fluid {width:100%;margin:0 auto;
+        &.fluid {
           .grid#{$grid}       {@include cols($grid, true);
             &.centerCol       {@include centerCol($grid, true);}
             &.noMargin        {@include cols($grid, true, true, false, 0, false);} 
           }      
-          [class*="grid"].pref#{$grid}     {@include pref($grid, true, true);}
-          [class*="grid"].suff#{$grid}     {@include suff($grid, true, true);}
-          [class*="grid"].push#{$grid}       {@include push($grid, true, true);} 
-          [class*="grid"].pull#{$grid}       {@include pull($grid, true, true);} 
-          [class*="grid"].pre#{$grid}        {@include pre($grid, true, true);}
-          [class*="grid"].post#{$grid}       {@include post($grid, true, true);}     
+          .pref#{$grid}     {@include pref($grid, true, true);}
+          .suff#{$grid}     {@include suff($grid, true, true);}
+          .push#{$grid}       {@include push($grid, true, true);} 
+          .pull#{$grid}       {@include pull($grid, true, true);} 
+          .pre#{$grid}        {@include pre($grid, true, true);}
+          .post#{$grid}       {@include post($grid, true, true);}     
         }     
       }
     } 
