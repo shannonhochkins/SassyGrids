@@ -31,7 +31,7 @@ For extended documentation, and a full example of a site built with sassyGrids, 
 
 ## Contributing
 
-This is in beta, and I plan to add many features in the future. I would very much like your input, so please get in touch with any suggestions or comments. 
+This is currently dead, and I don't plan to add any features in the future. I would very much not like your input, so please do not get in touch with any suggestions or comments. 
 
-Of course, if you don't see what you're looking for please just drop me
+Of course, if you don't see what you're looking for please do not drop me
 a line at shannon [at] shannonhochkins.com.
